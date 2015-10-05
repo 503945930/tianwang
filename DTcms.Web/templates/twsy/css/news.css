@@ -1,0 +1,48 @@
+*{margin: 0;padding: 0;font-family:"microsoft yahei";}
+a{text-decoration: none}
+.clear{clear: both}
+
+
+
+.news{width: 1000px;min-height: 500px;height: auto;margin: 10px auto;overflow: hidden;}
+.news .left{width: 180px;height: 100%;float: left}
+.news .left .about{width: 100%;height: 200px;background:url("../images/introduction/bg1_03.jpg") no-repeat}
+.news .left .about h3{color: #ffffff;padding:10px 50px 5px 50px;font-weight:normal}
+.news .left .about h4{color: #ffffff;padding:0 60px;font-weight:normal}
+/*.introduction .left .about ul{padding:10px 50px;}
+.introduction .left .about ul li{margin: 7px 0px;color: #ffffff;cursor: pointer}
+.introduction .left .about ul .current{background:yellow }*/
+.news .left .about div{color: #ffffff;width: 100%;margin: 10px auto;text-align: center;border-bottom: 1px solid #ffffff;cursor: pointer}
+.news .left .about .current{background: #C7E50A}
+.news .left img{width: 100%;margin: 10px 0;}
+
+
+.news .center{width: 780px;float: left;height:auto;border: 1px solid #dfdfdf;margin-left: 20px;display: block;overflow: hidden;}
+.news .center .title{width: 100%;height: 30px;border-bottom: 1px solid #dfdfdf;overflow: hidden}
+.news .center img{width: 60px;height: 20px;margin:7px 0 0 10px;float: left}
+.news .center .location{float: right;margin-right: 10px;}
+.news .center .location span{font-size: 13px;}
+
+
+
+.news .center ul{margin: 20px 0 20px 0;}
+.news .center ul li {position: relative;color: black;height: 20px;overflow: hidden;white-space: nowrap;  text-overflow: ellipsis;margin: 10px 0px 10px 10px;}
+.news .center ul li a{color: black;margin-left: 20px;}
+.news .center ul li a:hover{color: #027bd1}
+.news .center ul li span{float: right;margin-right: 20px;}
+.news .center ul .num{position: absolute;top:2px;left: 0px;width: 16px; height: 16px;background: #1389d7;color: #ffffff;font-size: 10px;margin-right: 10px;overflow: hidden;text-align: center;}
+
+
+
+
+
+
+
+
+/*new_list*/
+
+.news_content  .meta{border-bottom: 1px solid #eee;padding-bottom: 10px;width: 100%;}
+.news_content  .meta .meta-tit{color: #3B8DD1;font-size: 18px;margin:0 auto;text-align: center}
+.news_content  .meta .meta_info{color:#999 ;text-align: right;}
+.time{background: url("../images/news/sprite.gif") no-repeat;background-position: left -158px;margin-right: 10px;padding-left: 20px}
+.entry{font-size: 13px;line-height: 24px;word-wrap: break-word;}

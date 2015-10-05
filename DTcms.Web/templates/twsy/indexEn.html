@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>CHANGZHOU CITY TIANWANG PLASTIC CO.,LTD</title>
+    <script src="<%templateskin%>/js/jquery.js" type="text/javascript"></script>
+    <script src="<%templateskin%>/js/index.js" type="text/javascript"></script>
+    <link href="<%templateskin%>/css/index.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+  <%template src="_headerEn.html"%>
+    <div class="content">
+        <div class="introduction-news">
+            <div class="introduction">
+                <div class="title">
+                    <img src="<%templateskin%>/images/aboutus_03.png" alt=""/>
+                    <span><a href="/content/about.html">More&lt;&lt;</a></span>
+                </div>
+                <div class="content-images">
+                    <div class="content"style="overflow: hidden" >
+                        <%=get_article_content("aboutEn")%>
+
+                    </div>
+                    <div class="images">
+                        <img src="<%templateskin%>/images/gsjj_04 .jpg" style="width: 170px;height: 200px" alt=""/>
+                    </div>
+                </div>
+
+            </div>
+            <div class="news">
+                <div class="title">
+                    <img src="<%templateskin%>/images/news.jpg" alt=""/>
+                    <img  class="point" src="<%templateskin%>/images/xwdt_06.png" alt=""/>
+                    <span><a href="/news/33.html">More&lt;&lt;</a></span>
+                </div>
+                <div class="list">
+                    <ul>
+                         <%set DataTable redNews=get_article_list("newsEn", 0,9, "status=0 and is_top=1")%>
+                        <%loop newsdr11 redNews%>
+                   
+             <li style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;margin: 5px 0;">
+              <span  style="float: right"><%datetostr({newsdr11[add_time]},yyyy-MM-dd)%></span>
+              <a style="color: black" href="<%linkurl("news_showEn",{newsdr11[id]})%>" title="{newsdr11[title]}">{newsdr11[title]}</a>
+            </li>
+         
+                        <%/loop%>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="show">
+            <div class="title">
+                <img src="<%templateskin%>/images/products.jpg" alt=""/>
+                <span><a href="/product.html">More&lt;&lt;</a></span>
+            </div>
+            <div class="cp">
+                <div class="pre" id="pre">
+                    <img src="<%templateskin%>/images/pre6_10_10.png" alt=""/>
+                </div>
+                <div class="cpImgas">
+                    <div id="img" style="height:200px;width:850px;position:relative;overflow:hidden;">
+                        <ul style="position:absolute;left:0;top:0;">
+                            
+                             <%set DataTable redProducts=get_article_list("productEn", 0,5, "is_red=1")%>
+                      <%foreach(DataRow dr in redProducts.Rows)%>
+                              <li style="float:left;list-style:none;">
+                                  <a style="display: block;" target= _blank  href="<%linkurl("product_showEn",{dr[id]})%>" >  <img src="{dr[img_url]}" alt="{dr[title]}" style="width: 140px;height: 140px"></img></a>
+
+                                    <a href="#" style="display:block;text-align:center;color:black;height: 20px">{dr[title]}</a>
+                                </li>
+                            
+
+                             <%/foreach%>
+                         
+                        </ul>
+                        </div>
+          
+                <div class="next" id="next">
+                    <img src="<%templateskin%>/images/next6_10_12.png" alt=""/>
+                </div>
+            </div>
+                </div>
+        </div>
+          <script type="text/javascript">
+              window.onload = function () {
+                  var div = document.getElementById('img');
+                  var ul = div.getElementsByTagName('ul')[0];
+                  var li = ul.getElementsByTagName('li');
+                  var speed = 2;
+                  ul.innerHTML = ul.innerHTML + ul.innerHTML;
+                  ul.style.width = li[0].offsetWidth * li.length + 'px';
+                  function move() {
+                      if (ul.offsetLeft < -ul.offsetWidth / 2) {
+                          ul.style.left = '0';
+                      }
+                      if (ul.offsetLeft > 0) {
+                          ul.style.left = -ul.offsetWidth / 2 + 'px';
+                      }
+                      ul.style.left = ul.offsetLeft + speed + 'px';
+                  }
+                  var timer = setInterval(move, 30);
+                  div.onmouseover = function () {
+                      clearInterval(timer);
+                  };
+                  div.onmouseout = function () {
+                      timer = setInterval(move, 30);
+                  };
+                  document.getElementById("pre").onclick = function () {
+                      speed = -2;
+                  };
+                  document.getElementById("next").onclick = function () {
+                      speed = 2;
+                  };
+              };
+    </script>
+        <div class="trade-chat">
+            <div class="trade">
+                <div class="title">
+                    <img src="<%templateskin%>/images/export.png" alt=""/>
+                    <span><a href="/trade/38.html">More&lt;&lt;</a></span>
+                </div>
+                <div class="wm1" style="height: 210px">
+                        
+                    <ul style="width: 100%;height: 100%;list-style-type: none;overflow: hidden">
+                        
+                         <%set DataTable redTrade=get_article_list("waimaoEn", 0,4, "is_red=1")%>
+                        <%foreach(DataRow drr in redTrade.Rows)%>
+                        
+                        
+                        
+                          <li style="width: 45%;height: 45%;float: left;margin: 10px;overflow: hidden">
+                            <div class="cum1" onclick="">
+                              <a style="display: block;width: 130px;height: 100px"  href="<%linkurl("trade_showEn",{drr[id]})%>" >   <img src="{drr[img_url]}" alt="{drr[title]}" style="width: 130px;height: 100px" alt=""/></a>
+                            </div>
+                            <div class="cum2" style="overflow: hidden">
+                                <p>{drr[title]}</p>
+                            </div>
+                        </li>
+                      
+                            
+                       
+
+                        <%/foreach%>
+                      
+                      
+                    </ul>
+                           
+
+                </div>
+            </div>
+         
+       
+            <div class="chat">
+                <div class="title">
+                    <img src="<%templateskin%>/images/contact.jpg" alt=""/>
+                    <span><a href="/contact/lianxiwomen.html">More&lt;&lt;</a></span>
+                </div>
+                <div class="lx">
+                    <img src="<%templateskin%>/images/lx_004.jpg" alt=""/>
+                    <h2> CHANGZHOU CITY TIANWANG PLASTIC CO.,LTD</h2>
+                    <h5>TEL：0519-83639759</h5>
+                    <h5>FAX：0519-83831228</h5>
+                 <!--   <h5>网址：http://lmxs.cn.alibaba.com</h5>-->
+                    <h5>ADD：HEXI VILLAGE ZOUQU TOWN WU JIN DISTRICT JIANGSU OF CHINA</h5>
+                    <h5>
+                        <a target="_blank" href="https://www.facebook.com/lindamasterbatch@gmail.com/"><img src="<%templateskin%>/images/facebook.png"  width="40px" height="35px;" style="margin-left:80px"  border="0" /></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/lindamasterbatch@gmail.com/"><img src="<%templateskin%>/images/linkedin.jpg"  width="40px" height="35px"  border="0" /></a>
+                          <a target="_blank" href="https://twitter.com/lindamasterbatch@gmail.com/"><img src="<%templateskin%>/images/tw.png"  width="40px" height="35px"  border="0" /></a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <%template src="_footerEn.html"%>
+    <div class="clear"></div>
+
+</body>
+</html>

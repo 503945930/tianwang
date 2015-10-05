@@ -1,0 +1,18 @@
+*{margin: 0;padding: 0;font-family:"microsoft yahei";}
+a{text-decoration: none}
+.clear{clear: both}
+
+
+
+
+
+.product_category{margin: 10px 0;}
+.product_category ul li{background: #ffffff}
+.product_category .tip{background:#3E6AAB }
+.product_category ul li {margin:5px 0;list-style-type: none;border-bottom: 1px dashed #999999;text-align: center;color: #ffffff}
+.product_category ul li a{color: black}
+.center  .photo_list{height: auto;}
+.center  .photo_list ul{height: 700px;width: 100%;margin: 20px;}
+.center .photo_list ul li{width: 150px;height: auto;float: left}
+.center .photo_list ul li img{width: 150px;height: 150px;}
+.news .center .photo_list ul li span{text-align: center;}

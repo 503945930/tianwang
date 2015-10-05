@@ -1,0 +1,16 @@
+
+.summary{width: 1000px;height: auto;margin: 10px auto;overflow: hidden}
+.summary .left{width: 180px;height: 100%;float: left}
+.summary .left .about{width: 100%;height: 200px;background: url("../images/introduction/bg1_03.jpg") no-repeat;}
+.summary .left .about h3{color: #ffffff;padding:10px 50px 5px 50px;font-weight:normal}
+.summary .left .about h4{color: #ffffff;padding:0 50px;font-weight:normal}
+.summary .left .about div{color: #ffffff;width: 100%;margin: 10px auto;text-align: center;border-bottom: 1px solid #ffffff;cursor: pointer}
+.summary .left .about .current{background: #C7E50A}
+.summary img{width: 100%;margin: 10px 0;}
+
+
+.summary .center{width: 780px;float: left;height:auto;border: 1px solid #dfdfdf;margin-left: 20px;}
+.summary .center .title{width: 100%;height: 30px;border-bottom: 1px solid #dfdfdf;overflow: hidden}
+.summary .center .title img{width: 60px;height: 20px;margin:7px 0 0 10px;float: left}
+.summary .center .location{float: right;margin-right: 10px;}
+.summary .center .location span{font-size: 13px;}

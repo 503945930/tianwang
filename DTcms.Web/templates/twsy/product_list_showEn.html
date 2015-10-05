@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="<%templateskin%>/js/jquery.js" type="text/javascript"></script>
+    <script src="<%templateskin%>/js/index.js" type="text/javascript"></script>
+    <link href="<%templateskin%>/css/index.css" type="text/css" rel="stylesheet">
+    <link href="<%templateskin%>/css/news.css" type="text/css" rel="stylesheet">
+    <script src="<%templateskin%>/js/base.js" type="text/javascript"></script>
+
+    <link href="{config.webpath}css/pagination.css" type="text/css" rel="stylesheet">
+
+    <link href="<%templateskin%>/css/product.css" type="text/css" rel="stylesheet">
+    <title></title>
+      <script type="text/javascript">
+          $(function () {
+              $('.nav li a').removeClass('current');
+              $('#cpsj').addClass('current');
+          });
+    </script>
+    <%set string category_title=get_category_title(category_id,"产品展示")%>
+</head>
+<body>
+    <%template src="_headerEn.html"%>
+    <div class="news" style="overflow: visible;">
+        <div class="left">
+            <div class="about">
+                
+                    <h3>About us</h3>
+                    <!--<h4>News</h4>-->
+                    <div onclick="location.href='/zizhiEn/zizhiEn.html'">
+                        <pre>&bull;  Qualification</pre>
+                    </div>
+                    <div class="current" onclick="location.href='/productEn.html'" >
+                        <pre>&bull;  News</pre>
+                    </div>
+                    <div onclick="location.href='/contactEn/lianxiwomenyingwen.html'">
+                        <pre>&bull;  Contact us</pre>
+                    </div>
+                
+                
+                
+
+              
+
+            </div>
+
+            <div class="product_category">
+                <ul>
+                        
+                       
+                    <li class="tip">Product categories</li>
+                    <%set DataTable category_list=get_category_list("productEn", 0)%>
+                    <%foreach(DataRow dr in category_list.Rows)%>
+                    <li><a title="{dr[title]}" href="<%linkurl("product_list_showEn",{dr[id]})%>">{dr[title]}</a></li>
+                    <%/foreach%>
+                       
+                </ul>
+
+
+            </div>
+
+            <div>
+                <a href="/newsEn/39.html">
+                    <img src="<%templateskin%>/images/introduction/introduction1_06.jpg" alt="" /></a>
+            </div>
+            <div>
+                <a href="/contactEn/lianxiwomenyingwen.html">
+                    <img src="<%templateskin%>/images/introduction/introduction1_08.jpg" alt="" /></a>
+            </div>
+        </div>
+        <div class="center" style="height: auto; width: 750px;">
+            <div class="title">
+                <img src="<%templateskin%>/images/3.gif" alt="" />
+                <div class="location"><span>location:Home&gt;Products&gt;Show</span></div>
+            </div>
+            <div class="photo_list">
+                <span style="display: block;margin-left: 20px;color: red;margin-top: 10px;text-align: center;font-size: 18px;">{category_title}</span>
+                
+                   <ul style="list-style: none;">
+                           <%set DataTable photo_list=get_article_list("productEn", category_id, page, "status=0", out totalcount, out pagelist, "product_list_showEn", category_id, "__id__")%><!--取得一个分页DataTable-->
+                    <%foreach(DataRow dr in photo_list.Rows)%>
+                         <li style="height: 200px;width: 160px;word-wrap:break-word !important;overflow:hidden; text-overflow:clip;white-space:normal">
+                             <a style="height: 200px;width: 160px;display: block;margin-left:0px"  class="img" href="<%linkurl("product_showEn",{dr[id]})%>" title="{dr[title]}">
+                                 <img  src="{dr[img_url]}" alt="{dr[title]}" style="margin:0;float:none" />
+                                 <p style="display: block;height: 40px;width: 160px;text-align: center;margin-right:0;float: none;word-wrap: break-word !important;">{dr[title]}weeeeeeeeeee </p>
+                               
+                             </a>                         
+                         </li>
+
+                         <%/foreach%>
+                    
+                     </ul>
+                
+                
+                
+
+           
+                 <div class="clear"></div>
+                 <div class="line20" style="padding: 10px"></div>
+      <div class="flickr">{pagelist}</div> <!--放置页码列表-->
+
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="clear"></div>
+    <%template src="_footerEn.html"%>
+
+</body>
+</html>
+

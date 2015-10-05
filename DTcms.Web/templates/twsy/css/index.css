@@ -1,0 +1,84 @@
+/*清除默认样式开始*/
+*{margin: 0;padding: 0;font-family:"microsoft yahei";}
+a{ text-decoration: none;font-size:12px }
+/*清除默认样式结束*/
+body{min-width: 1200px;}
+
+/*头部开始*/
+.header{width: 1200px;height: 480px;margin: 0 auto;}
+.logo-nav{height: 116px;background: url("../images/tw_01.jpg") repeat-x;}
+.logo{margin-left: 15%;float: left;border: none;}
+.logo img{border: none}
+.nav-phone{width:70%;float: left;height: 100%}
+.phone a{display: block}
+.phone a img{margin-left:60% ;border: none}
+.nav{margin-left: 10%;}
+.nav ul li{list-style: none;float: left;cursor: pointer;margin-left: 3%;font-size: 20px !important;}
+.nav ul li a{color: #000000;font-size: 20px !important;}
+.nav ul  .current{color:#0a74c1;font-size: 24px !important;}
+.nav ul li a:hover{color: #0a74c1;font-size: 24px !important;}
+.clear{clear: both}
+.swith{width:1200px;margin: 0 auto;}
+.swith img{width: 1200px;height: 350px;}
+/*头部结束*/
+
+
+/*内容开始*/
+.content{width: 1100px;margin: 0 auto;}
+.introduction-news{overflow: hidden;}
+.introduction{float: left;width: 700px;height: 260px;border-radius: 10px;border: 1px solid #dfdfdf;overflow: hidden}
+.introduction span a{display: block;position: absolute;top: 0;color: black;right: 5px;line-height: 30px;}
+.introduction span a:hover{color: #027bd1}
+.introduction .title{width:100%;height: 30px;background:-moz-linear-gradient(top,#dfdfdf,#fafafa);/*火狐*/  background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#dfdfdf), to(#fafafa));/*谷歌*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#dfdfdf', endColorstr='#fafafa')"; /* IE8 */position: relative;  }
+.content-images{margin: 5px;overflow: hidden;width: 100%;height: 220px;}
+.content-images .content{float: left;width: 420px;height: 210px;margin-left: 20px;}
+.content-images .images{float: right;margin-right: 20px;}
+.content .news{float: left;width: 350px;height: 260px;border-radius: 10px;border: 1px solid #dfdfdf;overflow: hidden;margin-left: 45px;position: relative;}
+.news .title .point{display: block;position: absolute;top: 10px;left: 7px;}
+.news .title span a{display: block;position: absolute;top: 0;color: #ffffff;right: 5px;line-height: 30px;}
+.news .title span a:hover{color: #02d155}
+.news  .list ul{margin: 7px ;}
+.news  .list ul li{margin-left: 20px;font-size: 16px;cursor: pointer;}
+.news  .list ul li:hover{color:#0a74c1 }
+
+.content .show{width:100%;height: 240px;border-radius: 10px;border: 1px solid #dfdfdf;margin:10px 0;}
+.show .title{width:100%;height: 30px;border-radius: 10px;background:-moz-linear-gradient(top,#dfdfdf,#fafafa);/*火狐*/  background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#dfdfdf), to(#fafafa));/*谷歌*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#dfdfdf', endColorstr='#fafafa')"; /* IE8 */position: relative;  }
+.show span a{display: block;position: absolute;top: 0;color: black;right: 5px;line-height: 30px;}
+.show span a:hover{color: #027bd1}
+.show .cp{position: relative}
+.show .cp .pre{position: absolute;top: 80px;left: 60px;}
+.show .cp .pre:hover{left: 57px;top: 83px;}
+.show .cp .next{position: absolute;top: 80px;right: 60px;}
+.show .cp .next:hover{right: 57px;top: 83px;}
+.show .cp .cpImgas{position: absolute;left:110px;top: 20px;width: 980px;height:175px;overflow: hidden;}
+.show .cp .cpImgas ul li{float: left;list-style-type: none;margin: 0 10px;width: 150px;height: 180px;border: none}
+.show .cp .cpImgas ul li a{display: block;text-align: center;color: black;}
+.show .cp .cpImgas ul li a:hover{color: #027bd1}
+.content .trade-chat{margin:10px 0;}
+.trade-chat .trade{float: left;width: 700px;height: 280px;border-radius: 10px;border: 1px solid #dfdfdf;overflow: hidden}
+.trade-chat .chat{;background:#ffffff;float: left;width: 350px;height: 260px;border-radius: 10px;border: 1px solid #dfdfdf;overflow: hidden;margin-left: 45px;position: relative;}
+.trade .title{width:100%;height: 30px;border-radius: 10px;background:-moz-linear-gradient(top,#dfdfdf,#fafafa);/*火狐*/  background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#dfdfdf), to(#fafafa));/*谷歌*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#dfdfdf', endColorstr='#fafafa')"; /* IE8 */position: relative;  }
+.trade span a{display: block;position: absolute;top: 0;color: black;right: 5px;line-height: 30px;}
+.trade span a:hover{color: #027bd1}
+.trade .wm1{margin: 10px;overflow: hidden;}
+.trade .wm1 .row1 {width: 340px;height: 110px;float: left;}
+.trade .wm1 .cum1{width: 40%;float: left;height: 100%}
+.trade .wm1 .cum2{width: 60%;float: left;height: 100%}
+.trade .wm1 .cum2 p{text-indent: 2em;font-size:12px}
+.chat .title{width:100%;height: 30px;border-radius: 10px;background:-moz-linear-gradient(top,#dfdfdf,#fafafa);/*火狐*/  background:-webkit-gradient(linear, 0% 0%, 0% 100%,from(#dfdfdf), to(#fafafa));/*谷歌*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#dfdfdf', endColorstr='#fafafa')"; /* IE8 */position: relative;  }
+.chat span a{display: block;position: absolute;top: 0;color: #ffffff;right: 5px;line-height: 30px;}
+.chat span a:hover{color: #02d155}
+.chat .lx img{margin-left: 10px;}
+.chat .lx h2{margin: 5px 0 5px 10px;display: block;font-size:12px}
+.chat .lx h5{margin: 5px 0 5px 10px;display: block;font-size:12px}
+/*内容结束*/
+
+/*底部开始*/
+.footer{width: 1200px;height:130px;background: #d4e2e5;margin: 10px auto 0 auto;}
+.footer .space{padding-top: 50px;}
+.footer .foot-content{width: 700px;height: 70px;margin: 0 auto; }
+/*底部结束*/
